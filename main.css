@@ -18,11 +18,15 @@ ul, li, .btn {
     display: block;
 }
 
+a {
+	text-decoration: none;
+}
+
 .container {
-	 width: 100%;
-	 max-width: 1170px;
-	 margin: 0 auto;
-	 padding: 0 15px;
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
 
 .header {
@@ -33,7 +37,6 @@ ul, li, .btn {
 	z-index: 1000;
 	width: 100%;
 	padding-top: 10px;
-
 }
 
 .grey {
@@ -112,11 +115,11 @@ ul, li, .btn {
 }
 
 .log {
-	margin-left: 120px;
+	margin-left: 100px;
+    display: flex;
 }
 
 .log a {
-    text-decoration: none;
     color: #FFF;
 }
 
@@ -585,16 +588,16 @@ hr {
 	background-color: #F38181;
 }
 
-.reviews__btn {
+.arrow__btn {
 	font-size: 0;
 	color: transparent;
 	position: absolute;
-	top: 50%;
+	top: 40%;
 	transform: translateY(-50%);
 	z-index: 1;
 }
 
-.reviews__btn:after {
+.arrow__btn:after {
 	content: "";
     display: block;
     width: 40px;
@@ -603,14 +606,37 @@ hr {
     border-left: 3px solid #333;
 }
 
-.reviews__btn--prev {
-	left: 0;
+.btn__prev {
+	left: -70px;
 	transform: rotate(-45deg);
 }
 
-.reviews__btn--next {
-	right: 0;
+.btn__next {
+	right: -70px;
 	transform: rotate(135deg);
+}
+
+.wraper__dots {
+	display: flex;
+	justify-content: center;
+}
+
+.dot {
+	width: 15px;
+	height: 15px;
+	background: rgba(51, 51, 51, 0.8);
+	border-radius: 50px;
+	margin-left: 10px;
+}
+
+.dot:last-child {
+	margin-left: 10px;
+}
+
+.dot:hover,
+.dot:active {
+	background: #333333;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .card {
@@ -620,9 +646,23 @@ hr {
 	margin: 80px -15px 0;
 }
 
+.card__items {
+	display: flex;
+	position: relative;
+	margin-bottom: 40px;
+} 
+
 .card__item {
 	width: 33.33333%;
     padding: 0 15px;
+}
+
+.no__active {
+	width: 0;
+}
+
+.active {
+	width: 100%;
 }
 
 .card__inner {
@@ -637,7 +677,7 @@ hr {
 .card__img img {
 	display: block;
     max-width: 100%;
-    height: auto;
+    max-height: 470px;
     transition: opacity .1s linear;
 }
 
