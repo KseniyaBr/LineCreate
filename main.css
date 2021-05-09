@@ -268,12 +268,6 @@ a {
 	margin: 80px -15px 0;
 }
 
-.card__item {
-	width: 33.33333%;
-    padding: 0 15px;
-}
-
-
 .card__inner {
 	background-color: #FCE38A;
 	position: relative;
@@ -431,20 +425,65 @@ hr {
 
 /*Our team*/
 
-.hidden {
-	display: none;
+.arrow__btn {
+	font-size: 0;
+	position: absolute;
+	top: 200px;
+	z-index: 1;
+	background: transparent;
+    border: none;
 }
 
-.action {
-	display: block;
+.arrow__btn:after {
+	content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-top: 3px solid #333;
+    border-left: 3px solid #333;
 }
 
+.btn__prev {
+	left: -150px;
+	transform: rotate(-45deg);
+}
 
-.card__items {
-	display: flex;
+.btn__next {
+	right: -150px;
+	transform: rotate(135deg);
+}
+
+.carousel {
+	overflow: hidden;
 	position: relative;
 	margin-bottom: 40px;
-} 
+}
+
+.carousel .carousel__item,
+.carousel .carousel__item--hidden {
+  display: none;
+}
+
+.carousel .carousel__item--visible {
+	display: flex;
+	justify-content: space-between;
+	animation: fadeVisibility 0.5s;
+}
+
+.carousel__actions {
+  position: relative;
+}
+
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: opacity linear;
+  }
+}
+
 
 .social {
 	display: flex;
@@ -479,34 +518,6 @@ hr {
 	color: #333;
 }
 
-.arrow__btn {
-	font-size: 0;
-	color: transparent;
-	position: absolute;
-	top: 40%;
-	transform: translateY(-50%);
-	z-index: 1;
-}
-
-.arrow__btn:after {
-	content: "";
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-top: 3px solid #333;
-    border-left: 3px solid #333;
-}
-
-.btn__prev {
-	left: -70px;
-	transform: rotate(-45deg);
-}
-
-.btn__next {
-	right: -70px;
-	transform: rotate(135deg);
-}
-
 .wraper__dots {
 	display: flex;
 	justify-content: center;
@@ -525,10 +536,16 @@ hr {
 }
 
 .dot:hover,
-.dot:active {
+.current__dot {
 	background: #333333;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+
+/*Carousel*/
+
+
+
 
 /*We do*/
 
