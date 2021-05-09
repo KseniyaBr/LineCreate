@@ -432,6 +432,7 @@ hr {
 	z-index: 1;
 	background: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .arrow__btn:after {
@@ -484,7 +485,6 @@ hr {
   }
 }
 
-
 .social {
 	display: flex;
 	justify-content: center;
@@ -529,6 +529,7 @@ hr {
 	background: rgba(51, 51, 51, 0.8);
 	border-radius: 50px;
 	margin-left: 10px;
+	cursor: pointer;
 }
 
 .dot:last-child {
