@@ -1,3 +1,5 @@
+/*Slider*/
+
 const prev = document.getElementById('btn-prev'),
       next = document.getElementById('btn-next'),
       slides = document.querySelectorAll('.carousel__item'),
@@ -57,3 +59,20 @@ dots.forEach((item, indexDot) => {
 next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);
       
+
+/*Accordion*/
+
+const accordions = document.querySelectorAll('.accordion__item');
+
+for(item of accordions) {
+    item.addEventListener('click', function() {
+        if(this.classList.contains('active')) {
+            this.classList.remove('active');
+        } else {
+            for(line of accordions) {
+                line.classList.remove('active');
+            }
+            this.classList.add('active');
+        }
+    })
+}
